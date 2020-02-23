@@ -53,10 +53,14 @@ module.exports = function (ctx) {
       components: [
         'QInput',
         'QBtn',
+        'QDialog',
+        'QCard',
+        'QIcon',
       ],
 
       directives: [
-        'Ripple'
+        'Ripple',
+        'ClosePopup',
       ],
 
       // Quasar plugins

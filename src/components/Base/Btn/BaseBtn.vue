@@ -4,7 +4,7 @@
     :color="color"
     unelevated
     no-caps
-  />
+  ><slot/></q-btn>
 </template>
 
 <script lang="ts">
