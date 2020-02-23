@@ -1318,6 +1318,11 @@
     "@types/serve-static" "*"
     "@types/webpack" "*"
 
+"@types/webpack-env@^1.15.1":
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.15.1.tgz#c8e84705e08eed430b5e15b39c65b0944e4d1422"
+  integrity sha512-eWN5ElDTeBc5lRDh95SqA8x18D0ll2pWudU3uWiyfsRmIZcmUXpEsxPU+7+BsdCrO2vfLRC629u/MmjbmF+2tA==
+
 "@types/webpack-sources@*":
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/@types/webpack-sources/-/webpack-sources-0.1.6.tgz#3d21dfc2ec0ad0c77758e79362426a9ba7d7cbcb"
@@ -9436,6 +9441,11 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
+
+vue-book@0.1.0-alpha.18:
+  version "0.1.0-alpha.18"
+  resolved "https://registry.yarnpkg.com/vue-book/-/vue-book-0.1.0-alpha.18.tgz#f37af72a66dcee4e32ff22587b19c2103e1478c5"
+  integrity sha512-Oy3hFpiqiSTXUoSozRwiekAi1gt05sn1LZ4R/H+hNiC++wSML9MAChgMnQytXGJHn7kUrUo4r8/9b+tNyk4rEQ==
 
 vue-class-component@^6.2.0:
   version "6.3.2"
