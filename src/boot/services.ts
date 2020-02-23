@@ -1,6 +1,7 @@
+import 'reflect-metadata'
 import { Container } from 'typedi'
 import { Auth, LoggerService, StorageService, UserRepoService } from '@aeq/client-http-auth'
-import { Config } from '../config/Config'
+import { AppConfig } from '../config/AppConfig'
 import axios from 'axios'
 import { GlobalStore } from '../store/theGlobalStore'
 import { HttpService } from '@aeq/api-laravel'
@@ -8,7 +9,7 @@ import { UserRepo } from '../components/User/UserRepo'
 import { User } from '../components/User/User'
 
 export default ({ app, Vue }: any) => {
-  const config = Container.get(Config)
+  const config = Container.get(AppConfig)
   const store = Container.get(GlobalStore)
 
   const axiosInstance = axios.create({

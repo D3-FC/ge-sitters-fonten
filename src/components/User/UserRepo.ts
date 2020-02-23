@@ -2,7 +2,7 @@ import { Inject, Service } from 'typedi'
 import { TransformPlainToClass } from 'class-transformer'
 import { ApiLaravelTransformable } from '@aeq/api-laravel'
 import { AuthToken, BearerCredential, UserRepo as AuthUserRepo } from '@aeq/client-http-auth'
-import { Config } from '../../config/config'
+import { AppConfig } from '../../config/AppConfig'
 import { User } from './User'
 import { UserQuery } from './UserQuery'
 
@@ -12,7 +12,7 @@ export class UserRepo implements AuthUserRepo {
   api!: ApiLaravelTransformable
 
   @Inject()
-  cfg!: Config
+  cfg!: AppConfig
 
   @TransformPlainToClass(AuthToken)
   async login (username: string, password: string): Promise<AuthToken> {

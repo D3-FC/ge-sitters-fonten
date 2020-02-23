@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@aeq/api-laravel@^0.0.17":
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/@aeq/api-laravel/-/api-laravel-0.0.17.tgz#bc2d25c073a4636f1d6cd4df37fefa304ad73404"
-  integrity sha512-I8iaUCd/38ZdUrMh68VueMPrdIOrD02BU0XvKat93InpBMl/4+KG2pxpFYTWfoALy0CbB66NLC6enEmW/LD0xg==
+"@aeq/api-laravel@^0.0.18":
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/@aeq/api-laravel/-/api-laravel-0.0.18.tgz#8b0464e61a9ce316a88e077fd188b975b4ee9b8c"
+  integrity sha512-TE2k85kF3JBYqU/a/Jr7YTTFTLgBzfHdjQB6z4mOIETq1xegiDR+fjXf8fBkKqKxQpV07xrIDNzkEn+sz1rcWw==
   dependencies:
     "@aeq/http-errors" "^0.0.2"
-    "@types/qs" "^6.9.0"
+    "@types/qs" "^6.9.1"
     axios "^0.19.0"
     class-transformer "^0.2.3"
     qs "^6.9.1"
@@ -1250,7 +1250,7 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
-"@types/qs@^6.9.0":
+"@types/qs@^6.9.1":
   version "6.9.1"
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.1.tgz#937fab3194766256ee09fcd40b781740758617e7"
   integrity sha512-lhbQXx9HKZAPgBkISrBcmAcMpZsmpe/Cd/hY7LGZS5OfkySUBItnPZHgQPssWYUET8elF+yCFBbP1Q0RZPTdaw==
@@ -1259,6 +1259,13 @@
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.3.tgz#7ee330ba7caafb98090bece86a5ee44115904c2c"
   integrity sha512-ewFXqrQHlFsgc09MK5jP5iR7vumV/BYayNC6PgJO2LPe8vrnNFyjQjSppfEngITi0qvfKtzFvgKymGheFM9UOA==
+
+"@types/reflect-metadata@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@types/reflect-metadata/-/reflect-metadata-0.1.0.tgz#592805bdf6d63dd7229773218afeba37ac2eab16"
+  integrity sha512-bXltFLY3qhzCnVYP5iUpeSICagQ8rc9K2liS+8M0lBcz54BHs3O6W5UvqespVSuebo1BXLi+/y9ioELAW9SC2A==
+  dependencies:
+    reflect-metadata "*"
 
 "@types/serve-static@*":
   version "1.13.3"
@@ -7780,6 +7787,11 @@ redent@^1.0.0:
   dependencies:
     indent-string "^2.1.0"
     strip-indent "^1.0.1"
+
+reflect-metadata@*, reflect-metadata@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
+  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
 
 regenerate-unicode-properties@^8.1.0:
   version "8.1.0"
