@@ -1,25 +1,5 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
-//
-// const BUILD_ENV = process.env.BUILD_ENV
-// const envName = BUILD_ENV || 'dev'
-// const env = require(`./envs/${envName}.json`)
-// const envparser = require('./config/envparser')
-//
-// // function addGlobalImportsForSass (cfg) {
-// //   const scssRule = cfg.module.rules.find(rule => {
-// //     return String(rule.test).includes('scss')
-// //   })
-// //   scssRule.oneOf.forEach(one => {
-// //
-// //     const use = one.use.find(use => {
-// //       return use.loader === 'sass-loader'
-// //     })
-// //     use.options.data = appPackage.build.loaders.sass
-// //     use.options.modules = true
-// //   })
-// //   return scssRule
-// // }
 
 module.exports = function (ctx) {
   return {
@@ -33,7 +13,7 @@ module.exports = function (ctx) {
     // https://quasar.dev/quasar-cli/cli-documentation/boot-files
     boot: [
       'i18n',
-      'axios'
+      'services'
     ],
 
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css

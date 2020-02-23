@@ -58,10 +58,6 @@ export default Vue.extend({
     EssentialLink
   },
 
-  mounted(){
-    console.log('AAA', process.env.API_URL)
-  },
-
   data () {
     return {
       leftDrawerOpen: false,

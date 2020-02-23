@@ -2,7 +2,7 @@ module.exports = {
   root: true,
 
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },
 
@@ -11,10 +11,11 @@ module.exports = {
   },
 
   extends: [
-    'standard',
-    // https://eslint.vuejs.org/rules/#priority-a-essential-error-prevention
+    // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential'
+    'plugin:vue/essential',
+    '@vue/standard',
+    '@vue/typescript',
   ],
 
   // required to lint *.vue files
@@ -26,9 +27,7 @@ module.exports = {
     'ga': true, // Google Analytics
     'cordova': true,
     '__statics': true,
-    'process': true,
-    'Capacitor': true,
-    'chrome': true
+    'process': true
   },
 
   // add your custom rules here
@@ -49,6 +48,8 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'prefer-promise-reject-errors': 'off',
 
+    // allow console.log during development only
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     // allow debugger during development only
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
