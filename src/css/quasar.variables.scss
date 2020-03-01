@@ -12,18 +12,22 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary   : #299f55;
-$secondary : #26A69A;
-$accent    : #9C27B0;
+$primary: #299f55;
+$secondary: #26A69A;
+$accent: #9C27B0;
 
-$dark      : #383a45;
-
-$positive  : #21BA45;
-$negative  : #ec4245;
-$info      : #31CCEC;
-$warning   : #F2C037;
+$dark: #383a45;
+$dark-page: #121212 !default$positive: #21BA45;
+$negative: #ec4245;
+$info: #31CCEC;
+$warning: #F2C037;
+$muted: #D0D0D0;
 
 $button-padding-x: 12.2px;
-$button-border-radius           : 14px;
-$button-font-size               : 16px;
-$button-padding : 12.2px 32px;
+$button-border-radius: 14px;
+$button-font-size: 16px;
+$button-padding: 12.2px 32px;
+
+//$input-text-color: $muted;
+
+@import "transition";

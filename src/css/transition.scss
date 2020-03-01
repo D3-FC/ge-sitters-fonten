@@ -1,0 +1,19 @@
+@mixin transitionIn($properties, $duration: '0.15s') {
+  $transition: "";
+
+  @each $prop in $properties {
+    @if $transition == "" {
+      $transition: $transition + $prop + " " + $duration + " ease-out";
+    } @else {
+      $transition: $transition + ", " + $prop + " " + $duration+" ease-out";
+    }
+  }
+
+  transition: #{$transition};
+  will-change: $properties;
+}
+
+
+@mixin transition($properties...) {
+  @include transitionIn($properties, '0.15s')
+}

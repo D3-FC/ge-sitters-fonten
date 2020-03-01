@@ -1,7 +1,7 @@
 <template>
   <VbDemo>
     <VbCard title="default">
-      <BaseInputText v-model="text">
+      <BaseInputText v-model="text" placeholder="placeholder">
 
       </BaseInputText>
     </VbCard>
