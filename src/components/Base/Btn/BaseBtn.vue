@@ -1,10 +1,13 @@
 <template>
   <q-btn
-    :label="label"
     :color="color"
-    unelevated
+    :label="label"
     no-caps
-  ><slot/></q-btn>
+    rounded
+    unelevated
+  >
+    <slot/>
+  </q-btn>
 </template>
 
 <script lang="ts">
@@ -21,8 +24,11 @@ export default class BaseBtn extends Vue {
 }
 </script>
 
-<style lang="scss" module>
-  .main {
+<style
+  lang="scss"
+  module
+>
+.main {
 
-  }
+}
 </style>
