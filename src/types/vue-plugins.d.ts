@@ -1,8 +1,9 @@
 import { Vue } from 'vue/types/vue'
+import { I18nMessage } from '../i18n/I18nMessage'
 
 declare module 'vue/types/vue' {
-
   interface Vue {
-    $style: { [key: string]: string }
+    $tr: (key: I18nMessage) => string
+    $style: { [key: string]: string },
   }
 }

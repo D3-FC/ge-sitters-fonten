@@ -10,9 +10,10 @@ const i18n = new VueI18n({
   messages
 })
 
-export default ({ app }: any) => {
+export default ({ app, Vue }: any) => {
   // Set i18n instance on app
   app.i18n = i18n
+  Vue.prototype.$tr = (...args: any) => i18n.t(args)
 }
 
 export { i18n }
