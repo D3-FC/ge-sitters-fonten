@@ -1,7 +1,7 @@
 import { Container } from 'typedi'
 import { AppConfig } from '../config/AppConfig'
 
-export default ({ app, Vue, router }: any) => {
+export default async ({ app, Vue, router }: any) => {
   const config = Container.get(AppConfig)
   if (config.debug) {
     import('../components/Demo/demo.scss')
