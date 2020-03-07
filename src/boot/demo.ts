@@ -14,5 +14,10 @@ export default async ({ app, Vue, router }: any) => {
         hideFileExtensions: true
       })
     ])
+    Vue.prototype.$logEvent = (...args: any[]) => {
+      const err = new Error()
+      const eventName: string | undefined = err.stack?.split('at')[2].split(' ')[1]
+      console.info(`%c${eventName}`, 'color: #007478', args[1])
+    }
   }
 }
