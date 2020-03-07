@@ -1,6 +1,14 @@
 // app global css in SCSS form
-.q-placeholder{
-  &::placeholder{
+
+.q-placeholder {
+  &::placeholder {
     color: $muted;
   }
+}
+
+:root {
+  --space-xl: 3.125rem;
+  --space-lg: 1.875rem;
+  --space-md: 1rem;
+  --space-sm: 0.75rem;
 }

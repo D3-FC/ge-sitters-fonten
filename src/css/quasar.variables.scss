@@ -27,6 +27,18 @@ $button-padding-x: 12.2px;
 $button-font-size: 16px;
 $button-padding: 9px 32px;
 
-//$input-text-color: $muted;
+$border-radios: 3px;
+
+$shadow-color         : #000 !default
+$shadow-transition    : box-shadow .28s cubic-bezier(.4, 0, .2, 1) !default
+$inset-shadow         : 0 7px 9px -7px rgba($shadow-color, .7) inset !default
+
+$elevation-umbra      : rgba($shadow-color, .2) !default
+$elevation-penumbra   : rgba($shadow-color, .14) !default
+$elevation-ambient    : rgba($shadow-color, .12) !default
+
+$shadow-2  : 0 1px 6px 0 rgba($shadow-color, 0.16px);
+
+$s-space-xl: 3.125rem;
 
 @import "transition";

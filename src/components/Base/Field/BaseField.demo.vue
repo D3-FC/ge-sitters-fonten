@@ -11,7 +11,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import BaseField from './BaseField.vue'
-import BaseInputText from '../Base/Input/BaseInputText.vue'
+import BaseInputText from '../Input/BaseInputText.vue'
 
 @Component({
   components: {

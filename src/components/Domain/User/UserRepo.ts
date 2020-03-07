@@ -2,7 +2,7 @@ import { Inject, Service } from 'typedi'
 import { TransformPlainToClass } from 'class-transformer'
 import { ApiLaravelTransformable } from '@aeq/api-laravel'
 import { AuthToken, BearerCredential, UserRepo as AuthUserRepo } from '@aeq/client-http-auth'
-import { AppConfig } from '../../config/AppConfig'
+import { AppConfig } from '../../../config/AppConfig'
 import { User } from './User'
 import { UserQuery } from './UserQuery'
 

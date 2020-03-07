@@ -6,6 +6,8 @@
     no-caps
     color="white"
     text-color="dark"
+    dense
+    @click="$emit('click')"
   >
     <q-icon left name="chevron_left"/>
     {{label}}

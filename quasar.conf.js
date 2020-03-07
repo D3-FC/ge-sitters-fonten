@@ -56,6 +56,7 @@ module.exports = function (ctx) {
         'QDialog',
         'QCard',
         'QIcon',
+        'QForm',
       ],
 
       directives: [

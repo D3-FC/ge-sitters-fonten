@@ -13,7 +13,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { mixins } from 'vue-class-component'
-import { CanBeInsideField } from '../../Field/CanBeInsideField'
+import { CanBeInsideField } from '../Field/CanBeInsideField'
 
 @Component
 export default class BaseInputText extends mixins(CanBeInsideField) {

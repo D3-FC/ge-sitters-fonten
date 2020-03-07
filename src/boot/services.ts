@@ -5,8 +5,8 @@ import { AppConfig } from '../config/AppConfig'
 import axios from 'axios'
 import { GlobalStore } from '../store/theGlobalStore'
 import { HttpService } from '@aeq/api-laravel'
-import { UserRepo } from '../components/User/UserRepo'
-import { User } from '../components/User/User'
+import { UserRepo } from '../components/Domain/User/UserRepo'
+import { User } from '../components/Domain/User/User'
 
 export default ({ app, Vue }: any) => {
   const config = Container.get(AppConfig)
