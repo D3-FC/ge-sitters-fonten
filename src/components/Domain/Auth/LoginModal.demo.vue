@@ -2,12 +2,13 @@
   <VbDemo>
     <VbCard title="default">
       <LoginModal
-        @register="$logEvent()"
-        @login="$logEvent()"
-        @close="$logEvent()"
         :form="login"
+        @close="$logEvent()"
+        @login="$logEvent()"
+        @register="$logEvent()"
       />
     </VbCard>
+
   </VbDemo>
 </template>
 
@@ -25,5 +26,6 @@ import { Form } from '@aeq/form'
 export default class LoginModalDemo extends Vue {
 
   login = new Form(async () => {}, new User())
+
 }
 </script>

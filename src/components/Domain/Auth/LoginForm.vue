@@ -4,13 +4,16 @@
       :error="errors.email"
       :label="t.email"
     >
-      <BaseInputText v-model="user.name"/>
+      <BaseInputText
+        autofocus
+        v-model="user.name"
+      />
     </BaseField>
     <BaseField
       :error="errors.password"
       :label="t.password"
     >
-      <BaseInputText v-model="user.password"/>
+      <BaseInputPassword v-model="user.password"/>
     </BaseField>
   </div>
 </template>
@@ -21,9 +24,10 @@ import BaseField from '../../Base/Field/BaseField.vue'
 import BaseInputText from '../../Base/Input/BaseInputText.vue'
 import { User } from '../User/User'
 import { FormError } from '@aeq/form'
+import BaseInputPassword from '../../Base/Input/BaseInputPassword.vue'
 
 @Component({
-  components: { BaseInputText, BaseField }
+  components: { BaseInputPassword, BaseInputText, BaseField }
 })
 export default class LoginForm extends Vue {
   $refs: any

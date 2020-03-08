@@ -1,21 +1,26 @@
 <template>
-  <q-btn
+  <QBtn
+    @click="$emit('click')"
+    dark-percentage
     no-caps
+    outline
     rounded
     unelevated
-    dark-percentage
-    :label="label"
-    outline
-    @click="$emit('click')"
   >
-    <slot/>
-  </q-btn>
+    <BaseText
+      :value="label"
+      capitalize
+    />
+  </QBtn>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import BaseText from '../Text/BaseText.vue'
 
-@Component
+@Component({
+  components: { BaseText }
+})
 export default class BaseBtnSecondary extends Vue {
   $refs: any
   @Prop(String) label?: string
