@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class BaseForm extends Vue {
@@ -14,8 +14,11 @@ export default class BaseForm extends Vue {
 }
 </script>
 
-<style lang="scss" module>
-  .footer{
-    margin-top: var(--space-xxl);
-  }
+<style
+  lang="scss"
+  module
+>
+.footer {
+  margin-top: var(--space-xxl);
+}
 </style>

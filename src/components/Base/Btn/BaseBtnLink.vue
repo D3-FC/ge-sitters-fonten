@@ -9,7 +9,10 @@
     dense
     @click="$emit('click')"
   >
-    <q-icon left name="chevron_left"/>
+    <q-icon
+      left
+      name="chevron_left"
+    />
     {{label}}
   </q-btn>
 </template>
@@ -24,16 +27,19 @@ export default class BaseBtnLink extends Vue {
 }
 </script>
 
-<style lang="scss" module>
-  .main {
-    padding: 0 $button-padding-x 0 0;
-  }
+<style
+  lang="scss"
+  module
+>
+.main {
+  padding: 0 $button-padding-x 0 0;
+}
 </style>
 
 <style lang="scss">
-  .BaseBtnLink{
-    .q-btn__wrapper{
-      padding: 0;
-    }
+.BaseBtnLink {
+  .q-btn__wrapper {
+    padding: 0;
   }
+}
 </style>

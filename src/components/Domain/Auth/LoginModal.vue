@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
+import { Component, Emit, Vue } from 'vue-property-decorator'
 import BaseDialogModal from '../../Base/Dialog/BaseDialogModal.vue'
 import LoginForm from './LoginForm.vue'
 import { Form } from '@aeq/form'
@@ -40,7 +40,6 @@ import { User } from '../User/User'
 import BaseFromButton from '../../Base/Form/BaseFromButton.vue'
 import BaseForm from '../../Base/Form/BaseForm.vue'
 import AuthModalFooter from './AuthModalFooter.vue'
-import { Auth } from '@aeq/client-http-auth/src/Auth'
 
 @Component({
   components: { AuthModalFooter, BaseForm, BaseFromButton, LoginForm, BaseDialogModal }
@@ -51,7 +50,6 @@ export default class LoginModal extends Vue {
   }
 
   login = new Form(this.loginCmd, new User())
-
 
   get t () {
     return {
@@ -68,7 +66,7 @@ export default class LoginModal extends Vue {
 
   @Emit('login')
   async loginCmd (u: User) {
-    return u; //TODO
+    return u //TODO
   }
 }
 </script>

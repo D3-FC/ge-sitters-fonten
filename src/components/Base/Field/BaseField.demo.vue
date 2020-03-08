@@ -1,7 +1,10 @@
 <template>
   <VbDemo>
     <VbCard title="default">
-      <BaseField label="label" error="error text">
+      <BaseField
+        label="label"
+        error="error text"
+      >
         <BaseInputText v-model="text"/>
       </BaseField>
     </VbCard>
@@ -9,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 import BaseField from './BaseField.vue'
 import BaseInputText from '../Input/BaseInputText.vue'
 

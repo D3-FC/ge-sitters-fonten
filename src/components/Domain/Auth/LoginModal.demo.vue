@@ -14,10 +14,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 import LoginModal from './LoginModal.vue'
 import { User } from '../User/User'
-import { Form, FormError } from '@aeq/form'
+import { Form } from '@aeq/form'
 
 @Component({
   components: {
@@ -26,6 +26,6 @@ import { Form, FormError } from '@aeq/form'
 })
 export default class LoginModalDemo extends Vue {
 
-  login = new Form(async ()=>{}, new User())
+  login = new Form(async () => {}, new User())
 }
 </script>

@@ -2,8 +2,12 @@
   <VbDemo>
     <VbCard title="default">
       <BaseDialogModal>
-        <template  v-slot:header="{headerClass}">
-          <BaseDialogHeader close title="title" :class="headerClass"/>
+        <template v-slot:header="{headerClass}">
+          <BaseDialogHeader
+            close
+            title="title"
+            :class="headerClass"
+          />
         </template>
         <template v-slot="{contentClass}">
           <div :class="contentClass">
@@ -29,7 +33,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 import BaseDialogModal from './BaseDialogModal.vue'
 import BaseDialogHeader from './BaseDialogHeader.vue'
 

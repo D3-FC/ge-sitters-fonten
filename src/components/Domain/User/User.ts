@@ -7,7 +7,6 @@ export class User implements AuthUser {
   email: string = ''
   password: string = ''
 
-
   get username (): string {
     return this.email
   }

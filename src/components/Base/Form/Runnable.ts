@@ -1,4 +1,3 @@
-
 export interface Runnable {
   wasLastRunFine: boolean
   wasLastRunBad: boolean

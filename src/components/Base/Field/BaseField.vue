@@ -97,7 +97,8 @@ export default class BaseField extends Vue implements BaseFieldContract {
   padding-bottom: 0.25rem;
   @include transition(color);
   display: block;
-  &::first-letter{
+
+  &::first-letter {
     text-transform: uppercase;
   }
 }

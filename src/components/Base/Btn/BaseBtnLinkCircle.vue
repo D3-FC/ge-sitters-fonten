@@ -1,9 +1,16 @@
 <template>
-  <q-btn @click="$emit('click')" dense flat round color="primary" icon="close" />
+  <q-btn
+    @click="$emit('click')"
+    dense
+    flat
+    round
+    color="primary"
+    icon="close"
+  />
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class BaseBtnLinkCircle extends Vue {
@@ -12,8 +19,11 @@ export default class BaseBtnLinkCircle extends Vue {
 }
 </script>
 
-<style lang="scss" module>
-  .main {
+<style
+  lang="scss"
+  module
+>
+.main {
 
-  }
+}
 </style>

@@ -5,16 +5,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 import BaseForm from '../../Base/Form/BaseForm.vue'
 import BaseField from '../../Base/Field/BaseField.vue'
 import BaseInputText from '../../Base/Input/BaseInputText.vue'
+
 @Component({
   components: { BaseInputText, BaseField, BaseForm }
 })
 export default class UserEdit extends Vue {
   $refs: any
-
 
 }
 </script>

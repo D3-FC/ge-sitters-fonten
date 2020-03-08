@@ -1,7 +1,10 @@
 <template>
   <VbDemo>
     <VbCard title="default">
-      <LoginForm :value="user" :error="form.error">
+      <LoginForm
+        :value="user"
+        :error="form.error"
+      >
 
       </LoginForm>
     </VbCard>

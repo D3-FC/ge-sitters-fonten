@@ -14,6 +14,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import BaseBtnProgress from '../Btn/BaseBtnProgress.vue'
 import { Runnable } from './Runnable'
+
 @Component({
   components: { BaseBtnProgress }
 })

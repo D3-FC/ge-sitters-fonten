@@ -1,11 +1,18 @@
 <template>
   <div :class="[$style.main]">
-<!--    <BaseBtnLink-->
-<!--      :label="t.back"-->
-<!--      @click="$emit('back')"-->
-<!--    />-->
-    <h6 :class="$style.title" v-text="title"/>
-    <BaseBtnLinkCircle  :class="$style.btn" v-if="close" @click="$emit('close')"/>
+    <!--    <BaseBtnLink-->
+    <!--      :label="t.back"-->
+    <!--      @click="$emit('back')"-->
+    <!--    />-->
+    <h6
+      :class="$style.title"
+      v-text="title"
+    />
+    <BaseBtnLinkCircle
+      :class="$style.btn"
+      v-if="close"
+      @click="$emit('close')"
+    />
   </div>
 </template>
 
@@ -40,13 +47,16 @@ export default class BaseDialogHeader extends Vue {
   justify-content: space-between;
   align-items: flex-end;
 }
-.title{
+
+.title {
   margin: 0;
-  &::first-letter{
+
+  &::first-letter {
     text-transform: uppercase;
   }
 }
-.btn{
+
+.btn {
   margin-right: -2.3rem;
 }
 </style>
