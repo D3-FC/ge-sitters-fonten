@@ -4,6 +4,7 @@
       <BaseInputText
         v-model="text"
         placeholder="placeholder"
+        tabindex="2"
       >
 
       </BaseInputText>

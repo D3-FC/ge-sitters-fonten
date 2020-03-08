@@ -6,9 +6,7 @@
         @login="$logEvent()"
         @close="$logEvent()"
         :form="login"
-      >
-
-      </LoginModal>
+      />
     </VbCard>
   </VbDemo>
 </template>
