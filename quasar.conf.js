@@ -57,6 +57,7 @@ module.exports = function (ctx) {
         'QCard',
         'QIcon',
         'QForm',
+        'QSpinnerDots',
       ],
 
       directives: [

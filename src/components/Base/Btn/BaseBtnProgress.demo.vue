@@ -1,7 +1,18 @@
 <template>
   <VbDemo>
     <VbCard title="default">
-      <button type="button" @click="form.run()">Run</button>
+      <button
+        @click="form.run()"
+        type="button"
+      >Run
+      </button>
+      <label>
+        error
+        <input
+          type="checkbox"
+          v-model="error"
+        >
+      </label>
     </VbCard>
     <VbCard title="default">
       <BaseBtnProgress
@@ -32,11 +43,15 @@ import { sleep } from '@aeq/promise'
   }
 })
 export default class BaseBtnProgressDemo extends Vue {
-  form = new Form(async () => {
+
+  error = false
+  form = new Form(this.runCmd, null)
+
+  private async runCmd () {
     await sleep(2000)
-    throw new Error()
-  }, null)
-
-
+    if (this.error) {
+      throw new Error()
+    }
+  }
 }
 </script>

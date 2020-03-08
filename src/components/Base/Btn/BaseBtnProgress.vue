@@ -1,28 +1,38 @@
 <template>
-  <base-btn
-    @click.native="runCommand"
+  <BaseBtn
+    @click="runCommand"
     class="form-button"
-    tag="button"
     type="submit"
   >
     <span
       :class="{'form-button__container--hidden': cachedWasLastRunFine ||cachedWasLastRunBad}"
       class="form-button__container"
-    ><slot>{{text}}</slot></span>
+    ><slot><BaseText
+      :value="text"
+      capitalize
+    /></slot></span>
 
     <transition name="form-button-fade-long">
       <span
         class="form-button__overlay form-button__overlay--primary"
         v-if="isRunning"
       >
-        ...
+        <QSpinnerDots
+          color="white"
+          size="0.7em"
+        />
       </span>
     </transition>
     <transition name="form-button-fade">
       <span
         class="form-button__overlay form-button__overlay--success"
         v-if="cachedWasLastRunFine && !isRunning"
-      >ok</span>
+      >
+        <QIcon
+          name="check"
+          size="1.3em"
+        />
+      </span>
     </transition>
     <transition name="form-button-fade">
       <span
@@ -30,16 +40,18 @@
         v-if="cachedWasLastRunBad && !isRunning"
       >!</span>
     </transition>
-  </base-btn>
+  </BaseBtn>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 import BaseBtn from './BaseBtn.vue'
 import { Repeater } from '@aeq/executors'
+import BaseText from '../Text/BaseText.vue'
 
 @Component({
-  components: { BaseBtn }
+  components: { BaseText, BaseBtn },
+  inheritAttrs: false
 })
 export default class BaseBtnProgress extends Vue {
   $refs: any
@@ -76,6 +88,13 @@ export default class BaseBtnProgress extends Vue {
   resetSuccessCommand = new Repeater(this.resetSuccess, 1000)
   resetErrorCommand = new Repeater(this.resetError, 1000)
 
+  get buttonType () {
+    if (!this.cachedWasLastRunFine || this.isRunning) return 'primary'
+    if (this.cachedWasLastRunFine && !this.isRunning) return 'positive'
+    if (this.cachedWasLastRunBad && !this.isRunning) return 'negative'
+    return 'default'
+  }
+
   runCommand () {
     if (this.type === 'button') {
       this.$emit('run')
@@ -88,14 +107,6 @@ export default class BaseBtnProgress extends Vue {
 
   resetError () {
     this.cachedWasLastRunBad = false
-  }
-
-
-  get buttonType () {
-    if (!this.cachedWasLastRunFine || this.isRunning) return 'primary'
-    if (this.cachedWasLastRunFine && !this.isRunning) return 'positive'
-    if (this.cachedWasLastRunBad && !this.isRunning) return 'negative'
-    return 'default'
   }
 
   onSuccess () {
@@ -174,6 +185,10 @@ export default class BaseBtnProgress extends Vue {
 
     &--hidden {
       color: transparent;
+    }
+
+    &::first-letter {
+      text-transform: uppercase;
     }
   }
 }

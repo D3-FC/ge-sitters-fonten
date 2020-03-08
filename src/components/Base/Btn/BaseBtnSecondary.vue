@@ -1,30 +1,24 @@
 <template>
-  <QBtn
-    :color="color"
-    :label="label"
-    :type="type"
+  <q-btn
     no-caps
     rounded
     unelevated
+    dark-percentage
+    :label="label"
+    outline
+    @click="$emit('click')"
   >
     <slot/>
-  </QBtn>
+  </q-btn>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
-@Component({})
-export default class BaseBtn extends Vue {
+@Component
+export default class BaseBtnSecondary extends Vue {
   $refs: any
   @Prop(String) label?: string
-  @Prop({
-    type: String,
-    default: 'primary'
-  }) color?: string
-
-  @Prop(String) type?: string
-
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
-  <q-form @submit="$emit('submit', $event)">
-    <slot/>
-  </q-form>
+  <form @submit="$emit('submit', $event)">
+    <slot :footerClass="$style.footer"/>
+  </form>
 </template>
 
 <script lang="ts">
@@ -13,3 +13,9 @@ export default class BaseForm extends Vue {
 
 }
 </script>
+
+<style lang="scss" module>
+  .footer{
+    margin-top: var(--space-xxl);
+  }
+</style>

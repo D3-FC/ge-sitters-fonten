@@ -5,7 +5,7 @@
     :was-last-run-bad="executor.wasLastRunBad"
     :was-last-run-fine="executor.wasLastRunFine"
     :was-run-count="executor.wasRunCount"
-    @run="executor.run()"
+    @run="!noRun ? executor.run(): $emit('run')"
     :text="text"
   />
 </template>
@@ -22,6 +22,8 @@ export default class BaseFromButton extends Vue {
   @Prop({
     required: true
   }) executor!: Runnable
+
+  @Prop(Boolean) noRun?: boolean
 
   @Prop(String) text?: string
 }

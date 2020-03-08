@@ -17,7 +17,8 @@ $secondary: #26A69A;
 $accent: #9C27B0;
 
 $dark: #383a45;
-$dark-page: #121212 !default$positive: #21BA45;
+$dark-page: #121212 !default
+$positive: #21BA45;
 $negative: #ec4245;
 $info: #31CCEC;
 $warning: #F2C037;
@@ -26,6 +27,8 @@ $muted: #D0D0D0;
 $button-padding-x: 12.2px;
 $button-font-size: 16px;
 $button-padding: 9px 32px;
+$button-font-weight: 400;
+
 
 $border-radios: 3px;
 
@@ -40,5 +43,15 @@ $elevation-ambient    : rgba($shadow-color, .12) !default
 $shadow-2  : 0 1px 6px 0 rgba($shadow-color, 0.16px);
 
 $s-space-xl: 3.125rem;
+
+$border-color: rgba(0,0,0,0.24);
+
+$size-xxl: var(--space-xxl);
+
+@mixin padding-y($size){
+  padding-top: $size;
+  padding-bottom: $size;
+}
+
 
 @import "transition";

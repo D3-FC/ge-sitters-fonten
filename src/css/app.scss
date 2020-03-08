@@ -6,9 +6,22 @@
   }
 }
 
+.q-btn{
+  &--outline{
+    .q-btn__wrapper:before{
+      border: 1px solid $border-color
+    }
+  }
+}
+
+
+
+
 :root {
-  --space-xl: 3.125rem;
-  --space-lg: 1.875rem;
-  --space-md: 1rem;
+  --space-xxl: 3.125rem;
+  --space-xl: 1.875rem;
+  --space-lg: 1.25rem;
+  --space-md: 0.9375rem;
   --space-sm: 0.75rem;
 }
+

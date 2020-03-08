@@ -1,30 +1,29 @@
 <template>
-  <base-form :class="[$style.main]">
-    <base-field
+  <div :class="[$style.main]">
+    <BaseField
       :error="errors.email"
       :label="t.email"
     >
-      <base-input-text v-model="user.name"/>
-    </base-field>
-    <base-field
+      <BaseInputText v-model="user.name"/>
+    </BaseField>
+    <BaseField
       :error="errors.password"
       :label="t.password"
     >
-      <base-input-text v-model="user.password"/>
-    </base-field>
-  </base-form>
+      <BaseInputText v-model="user.password"/>
+    </BaseField>
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-import BaseForm from '../../Base/Form/BaseForm.vue'
 import BaseField from '../../Base/Field/BaseField.vue'
 import BaseInputText from '../../Base/Input/BaseInputText.vue'
 import { User } from '../User/User'
 import { FormError } from '@aeq/form'
 
 @Component({
-  components: { BaseInputText, BaseField, BaseForm }
+  components: { BaseInputText, BaseField }
 })
 export default class LoginForm extends Vue {
   $refs: any
@@ -39,7 +38,7 @@ export default class LoginForm extends Vue {
     required: true
   }) error!: FormError
 
-  user: User | null = null
+  user = this.value
 
   get t () {
     return {
@@ -55,8 +54,8 @@ export default class LoginForm extends Vue {
     }
   }
 
-  created () {
-    this.user = this.value
+  getData (): User {
+    return this.user
   }
 }
 </script>

@@ -1,20 +1,28 @@
 <template>
-  <q-card class="BaseDialogModal" :class="$style.main"  style="width: 700px; max-width: 80vw;">
-    <slot name="header" :headerClass="$style.header">
+  <QCard
+    :class="$style.main"
+    class="BaseDialogModal"
+    style="width: 700px; max-width: 80vw;"
+  >
+    <slot
+      :headerClass="$style.header"
+      name="header"
+    >
       <BaseDialogHeader
         :class="$style.header"
-        :title="title"
         :close="close"
+        :title="title"
         @close="$emit('close')"
       />
     </slot>
     <slot :contentClass="$style.content"/>
-  </q-card>
+  </QCard>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import BaseDialogHeader from './BaseDialogHeader.vue'
+
 @Component({
   components: { BaseDialogHeader }
 })
@@ -46,18 +54,24 @@ export default class BaseDialogModal extends Vue {
 .main {
 
 }
-.content{
-  padding: var(--space-xl);
+
+.content {
+  padding: var(--space-xxl);
 }
-.header{
-  padding: var(--space-md) var(--space-xl);
+
+.header {
+  padding: var(--space-md) var(--space-xxl);
+
+  + .content {
+    padding-top: var(--space-md);
+  }
 }
 </style>
 
 <style lang="scss">
-    .BaseDialogModal{
-      &.q-card{
-        border-radius: 14px;
-      }
-    }
+.BaseDialogModal {
+  &.q-card {
+    border-radius: 14px;
+  }
+}
 </style>
